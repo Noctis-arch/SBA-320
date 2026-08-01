@@ -13,6 +13,7 @@ function App() {
     try {
       const data = await fetchPokemon(search);
       setPokemon(data);
+      setSearch("");
     } catch (error) {
       console.error(error);
     }
