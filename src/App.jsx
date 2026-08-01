@@ -8,6 +8,10 @@ function App() {
 
       <main>
         <SearchBar />
+
+        <h2 className="welcome-title">
+          Search for any Pokémon to begin!
+        </h2>
       </main>
     </>
   );

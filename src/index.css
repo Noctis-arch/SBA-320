@@ -61,3 +61,10 @@ main {
 .search-section button:hover {
   background: #d84343;
 }
+
+.welcome-title {
+  text-align: center;
+  margin-top: 50px;
+  color: #555;
+  font-weight: normal;
+}
