@@ -123,3 +123,38 @@ main {
 .pokemon-card button:hover {
   background: #d84343;
 }
+
+.favorites {
+  background: white;
+  width: 320px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.favorites h2 {
+  text-align: center;
+  color: #ef5350;
+  margin-bottom: 15px;
+}
+
+.favorites ul {
+  list-style: none;
+  padding: 0;
+}
+
+.favorites li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.favorites li:last-child {
+  border-bottom: none;
+}
+
+.favorites p {
+  text-align: center;
+  color: #666;
+}
