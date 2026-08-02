@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar";
 import PokemonCard from "./components/PokemonCard";
 import Loading from "./components/Loading";
 import { fetchPokemon } from "./services/api";
+import FavoriteList from "./components/FavoriteList";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -52,6 +53,8 @@ function App() {
             Search for any Pokémon to begin!
           </h2>
         )}
+
+        <FavoriteList />
       </main>
     </>
   );
