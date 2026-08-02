@@ -1,4 +1,19 @@
+import { useContext } from "react";
+import { PokemonContext } from "../context/PokemonContext";
+
 function PokemonCard({ pokemon }) {
+  const { favorites, setFavorites } = useContext(PokemonContext);
+
+  function addFavorite() {
+    const alreadyExists = favorites.some(
+      (fav) => fav.id === pokemon.id
+    );
+
+    if (!alreadyExists) {
+      setFavorites([...favorites, pokemon]);
+    }
+  }
+
   return (
     <div className="pokemon-card">
       <img
@@ -20,6 +35,10 @@ function PokemonCard({ pokemon }) {
       <p>
         <strong>Weight:</strong> {pokemon.weight}
       </p>
+
+      <button onClick={addFavorite}>
+        Add to Favorites
+      </button>
     </div>
   );
 }
