@@ -158,3 +158,8 @@ main {
   text-align: center;
   color: #666;
 }
+
+.favorites li img {
+  display: block;
+  margin: 0 auto 8px;
+}
