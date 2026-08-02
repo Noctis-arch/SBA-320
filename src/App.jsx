@@ -2,6 +2,7 @@ import { useState } from "react";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
 import { fetchPokemon } from "./services/api";
+import PokemonCard from "./components/PokemonCard";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -31,9 +32,7 @@ function App() {
         />
 
         {pokemon ? (
-          <h2 className="welcome-title">
-            {pokemon.name.toUpperCase()} loaded successfully!
-          </h2>
+          <PokemonCard pokemon={pokemon} />
         ) : (
           <h2 className="welcome-title">
             Search for any Pokémon to begin!
