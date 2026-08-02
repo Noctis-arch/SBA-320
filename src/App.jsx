@@ -14,12 +14,19 @@ function App() {
   async function handleSearch() {
     if (!search.trim()) return;
 
+    setLoading(true);
+    setError("");
+
     try {
       const data = await fetchPokemon(search);
       setPokemon(data);
       setSearch("");
     } catch (error) {
+      setPokemon(null);
+      setError("Pokemon not found.");
       console.error(error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -34,7 +41,11 @@ function App() {
           handleSearch={handleSearch}
         />
 
-        {pokemon ? (
+        {loading ? (
+          <Loading />
+        ) : error ? (
+          <h2 className="error-message">{error}</h2>
+        ) : pokemon ? (
           <PokemonCard pokemon={pokemon} />
         ) : (
           <h2 className="welcome-title">
