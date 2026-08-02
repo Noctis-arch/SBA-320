@@ -1,12 +1,15 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import SearchBar from "./components/SearchBar";
-import { fetchPokemon } from "./services/api";
 import PokemonCard from "./components/PokemonCard";
+import Loading from "./components/Loading";
+import { fetchPokemon } from "./services/api";
 
 function App() {
   const [search, setSearch] = useState("");
   const [pokemon, setPokemon] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   async function handleSearch() {
     if (!search.trim()) return;
