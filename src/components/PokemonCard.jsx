@@ -9,6 +9,11 @@ function PokemonCard({ pokemon }) {
       <h2>{pokemon.name.toUpperCase()}</h2>
 
       <p>
+        <strong>Type:</strong>{" "}
+        {pokemon.types.map((type) => type.type.name).join(", ")}
+      </p>
+
+      <p>
         <strong>Height:</strong> {pokemon.height}
       </p>
 
