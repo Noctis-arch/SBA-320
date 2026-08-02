@@ -4,10 +4,13 @@ export const PokemonContext = createContext();
 
 function PokemonProvider({ children }) {
   const [favorites, setFavorites] = useState(() => {
+  try {
     const savedFavorites = localStorage.getItem("favorites");
-
     return savedFavorites ? JSON.parse(savedFavorites) : [];
-  });
+  } catch (error) {
+    return [];
+  }
+});
 
   useEffect(() => {
     localStorage.setItem("favorites", JSON.stringify(favorites));
