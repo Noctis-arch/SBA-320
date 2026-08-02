@@ -93,3 +93,18 @@ main {
   margin: 8px 0;
   font-size: 1rem;
 }
+
+.loading,
+.error-message {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.4rem;
+}
+
+.loading {
+  color: #ef5350;
+}
+
+.error-message {
+  color: crimson;
+}
