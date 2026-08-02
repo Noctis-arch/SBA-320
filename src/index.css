@@ -68,3 +68,28 @@ main {
   color: #555;
   font-weight: normal;
 }
+
+.pokemon-card {
+  background: white;
+  width: 320px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+}
+
+.pokemon-card img {
+  width: 180px;
+  height: 180px;
+}
+
+.pokemon-card h2 {
+  margin: 15px 0;
+  color: #ef5350;
+}
+
+.pokemon-card p {
+  margin: 8px 0;
+  font-size: 1rem;
+}
